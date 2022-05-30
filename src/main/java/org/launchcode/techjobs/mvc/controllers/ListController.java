@@ -21,6 +21,7 @@ public class ListController {
 
     static HashMap<String, String> columnChoices = new HashMap<>();
     static HashMap<String, Object> tableChoices = new HashMap<>();
+    static ArrayList<String> columnTags = new ArrayList<>();  // added columnTags to hold text for column name tag
 
     public ListController () {
         columnChoices.put("all", "All");
