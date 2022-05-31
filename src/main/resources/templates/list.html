@@ -6,6 +6,8 @@
 
         <div th:replace="fragments :: page-header"></div>
 
+        <div th:replace="fragments :: sb-block"></div>
+
         <div class="container body-content">
             <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
             <h2 class = "centered">View Jobs By Category</h2>

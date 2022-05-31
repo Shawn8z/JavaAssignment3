@@ -20,12 +20,12 @@ import static org.launchcode.techjobs.mvc.controllers.ListController.columnChoic
  */
 @Controller
 @RequestMapping("search")
-public class SearchController {
+public class SearchController extends TechJobController {
 
 
     @GetMapping(value = "")
     public String search(Model model, String pickedType) {
-        model.addAttribute("columns", columnChoices);
+//        model.addAttribute("columns", columnChoices);
         model.addAttribute("pickedType", "all");
         return "search";
     }
@@ -45,7 +45,7 @@ public class SearchController {
 
 
         model.addAttribute("jobs", result);
-        model.addAttribute("columns", columnChoices);
+//        model.addAttribute("columns", columnChoices);
         model.addAttribute("pickedType", column2);
         model.addAttribute("previousTerm", term2);
         return "search";
@@ -72,7 +72,7 @@ public class SearchController {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
         }
         model.addAttribute("jobs", jobs);
-        model.addAttribute("columns", columnChoices);
+//        model.addAttribute("columns", columnChoices);
         model.addAttribute("pickedType", pickedType);
         model.addAttribute("previousTerm", previousTerm);
 
