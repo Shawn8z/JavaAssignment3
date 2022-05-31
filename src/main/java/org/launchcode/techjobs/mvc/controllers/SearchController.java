@@ -32,6 +32,7 @@ public class SearchController {
     public String displaySearchResults(Model model, @RequestParam(name="searchType") String searchType,
                                        @RequestParam(name="searchTerm") String searchTerm) {
 
+
 //    public String displaySearchResults(Model model, String searchType, String searchTerm) {
 
         ArrayList<Job> jobs = new ArrayList<>();
