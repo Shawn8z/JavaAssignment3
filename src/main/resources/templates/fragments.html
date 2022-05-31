@@ -31,27 +31,43 @@
         <table  th:each="job : ${jobs}"  class="job-listing" >
             <tr>
                 <td>ID</td>
-                <td th:text="${job.id}"></td>
+                <td th:text="${job.id}" class="text-styling"></td>
             </tr>
             <tr>
                 <td>Name</td>
-                <td th:text="${job.name}"></td>
+                <td th:text="${job.name}" class="text-styling"></td>
             </tr>
             <tr>
                 <td>Employer</td>
-                <td th:text="${job.employer}"></td>
+                <td class="text-styling">
+                    <a th:text="${job.employer}"
+                       th:href="@{/search/results(term1=${previousTerm}, column1=${pickedType}, term2=${job.employer}, column2='employer')}">
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td>Location</td>
-                <td th:text="${job.location}"></td>
+                <td class="text-styling">
+                    <a th:text="${job.location}"
+                       th:href="@{/search/results(term1=${previousTerm}, column1=${pickedType}, term2=${job.location}, column2='location')}">
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td>Position Type</td>
-                <td th:text="${job.positionType}"></td>
+                <td class="text-styling">
+                    <a th:text="${job.positionType}"
+                       th:href="@{/search/results(term1=${previousTerm}, column1=${pickedType}, term2=${job.positionType}, column2='positionType')}">
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td>Skill</td>
-                <td th:text="${job.coreCompetency}"></td>
+                <td class="text-styling">
+                    <a th:text="${job.coreCompetency}"
+                       th:href="@{/search/results(term1=${previousTerm}, column1=${pickedType}, term2=${job.coreCompetency}, column2='coreCompetency')}">
+                    </a>
+                </td>
             </tr>
         </table>
     </th:block>

@@ -44,3 +44,7 @@ label {
 .centered {
     text-align: center;
 }
+
+.text-styling {
+    font-style: italic;
+}

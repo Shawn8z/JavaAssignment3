@@ -20,16 +20,18 @@
                         name="searchType"
                         th:id="${column.key}"
                         th:value="${column.key}"
-                        th:checked="${column.key == 'all'}"/>
+                        th:checked="${column.key == pickedType}"/>
                 <label th:for="${column.key}" th:text="${column.value}"></label>
             </span>
 
         </p>
 
+
         <p>
             <label for="searchTerm">Keyword:</label>
-            <input type="text" name="searchTerm" id="searchTerm" />
+            <input type="text" name="searchTerm" id="searchTerm" th:value="${previousTerm}" />
         </p>
+
 
         <input type="submit" value="Search" />
     </form>

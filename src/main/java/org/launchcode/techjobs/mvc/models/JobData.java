@@ -79,6 +79,23 @@ public class JobData {
         return jobs;
     }
 
+    public static ArrayList<Job> findByColumnAndValueWithinList(String column, String value, ArrayList<Job> list) {
+        ArrayList<Job> jobs = new ArrayList<>();
+
+        for (Job job : list) {
+
+            String jobString = getFieldValue(job, column);
+
+            if (jobString != null && jobString.toLowerCase().contains(value.toLowerCase())) {
+                jobs.add(job);
+            }
+        }
+
+        return jobs;
+    }
+
+
+
     public static String getFieldValue(Job job, String fieldName){
         String theValue;
         if (fieldName.equals("name")){
